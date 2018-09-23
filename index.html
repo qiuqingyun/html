@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="plugin/videoJs/video-js.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="css/iconfont/iconfont.js"></script>
+</head>
+
+<body>
+    <div class="mainContainer clearfix">
+        <header>
+            <div class="logos choosed" onclick="location='index.html'">
+                <svg class="icon logo" aria-hidden="true">
+                    <use xlink:href="#icon-navicon-logopz"></use>
+                </svg>
+                <p class="logoText logoText1">QING</p>
+                <p class="logoText logoText2">CREATER</p>
+            </div>
+            <nav class="topBar">
+                <ul>
+                    <li><a href="index.html" class="trans-fadeout choosed">首页</a></li>
+                    <li><a href="about.html" class="trans-fadeout">关于</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="mainCover">
+                <img src="" class="prePoster">
+                <p class="preTitle">(`・ω・´) 稍等 </p>
+                <button type="button" class="playButton" onclick="poster2Play()">Play Video</button>
+            </div>
+            <video id="mainPlayer" class="video-js vjs-big-play-centered">
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+            <div class="videoListContainer clearfix">
+                <div class="videoList" id="video1" onclick="video1.switch2X()"></div>
+                <div class="videoList" id="video2" onclick="video2.switch2X()"></div>
+                <div class="videoList" id="video3" onclick="video3.switch2X()"></div>
+                <div class="videoList" id="video4" onclick="video4.switch2X()"></div>
+            </div>
+        </div>
+        <footer>
+            <hr>
+            <div class="info">
+                <p class="copy"></p>
+                <a href="http://www.miibeian.gov.cn" class="filing">陕ICP备16014383号</a>
+            </div>
+            <div class="socialLinks">
+                <ul>
+                    <li class="socialIcon trans-fadeout"><a href="https://weibo.com/qiuqingyun98" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-weibo"></use>
+                            </svg></a> </li>
+                    <li class="socialIcon trans-fadeout"><a href="https://space.bilibili.com/34833434/#/" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-CN_bilibiliB"></use>
+                            </svg></a></li>
+                    <li class="socialIcon trans-fadeout"><a href="https://www.flickr.com/photos/qiuqingyun" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-flickr"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="js/video.js"></script>
+    <script src="js/base.js"></script>
+</body>
+
+</html>
