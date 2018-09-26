@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
     <title>主页</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="plugin/videoJs/video-js.css">
     <link rel="stylesheet" href="css/base.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css" media="(max-width: 1000px)"> -->
     <script src="css/iconfont/iconfont.js"></script>
 </head>
 
@@ -28,10 +30,11 @@
             </nav>
         </header>
         <div class="content">
-            <div class="mainCover">
+            <div class="mainCover" onclick="poster2Play()">
                 <img src="" class="prePoster">
                 <p class="preTitle">(`・ω・´) 稍等 </p>
-                <button type="button" class="playButton" onclick="poster2Play()">Play Video</button>
+                <button type="button" class="playButton">Play Video</button>
+                <p class="mobilePlaying"></p>
             </div>
             <video id="mainPlayer" class="video-js vjs-big-play-centered">
                 <p class="vjs-no-js">
@@ -70,7 +73,7 @@
             </div>
         </footer>
     </div>
-    <script src="js/video.js"></script>
+    <script src="plugin/videoJs/video.js"></script>
     <script src="js/base.js"></script>
 </body>
 
