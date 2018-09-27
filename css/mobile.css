@@ -1,6 +1,3 @@
-html{
-    font-size: 20px;
-}
 header{
     width: 90%;
     height: 7rem;
@@ -12,60 +9,104 @@ footer{
     width: 100%;
 }
 .content{
-    width: 90%;
-}
-.mainCover{
     width: 100%;
 }
-.videoListContainer,.topBar{
-    display: none;
-}
-/* .mainCover{
-    font-size: 1.5rem;
+.videoListContainer{
     margin-top: 2rem;
-    margin-bottom: 1rem;
-} */
+    width: 100%;
+}
+.mainContainer .videoListContainer .videoList .videoTitles {
+    font-size: 0.6rem;
+}
+.mainContainer .videoListContainer .videoList .covers {
+    width: inherit;
+    height: inherit;
+}
+.mainContainer .videoListContainer .videoList {
+    margin: 1rem auto;
+    float: none;
+}
+.mainContainer .videoListContainer .videoList:nth-child(odd) {
+    margin-right: auto;
+}
+.VideoListText{
+    display: block;
+    color: #999;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+}
+.topDrawer{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -15.2rem;
+    top: -4.2rem;
+    z-index: 5;
+    background: rgb(238, 241, 243);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.topBar ul {
+    padding-left: 0;
+    padding-top: 5rem;
+}
+.topBar ul li {
+    display: block;
+    width: 3rem;
+    margin: 0 auto;
+}
+.topBarListHr{
+    width: 40%;
+}
+.mobileSwitchBotton {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.mobileSwitchBotton,.topBarListHr,.cross{
+    display: block;
+}
+.cross {
+    font-size: 1.4rem;
+    position: absolute;
+    right: 1.1rem;
+    top: 2.3rem;
+}
+.selfie {
+    width: 50%;
+}
+.textContent{   
+    width: 85%;
+    margin: 2rem auto;
+}
+.mainCover{
+    font-size: 1.5rem;
+    margin: 0;
+}
 .mainCover .preTitle {
     font-size: 1rem;
     margin-bottom: 1rem;
 }
 .playButton{
-    width: 1.5rem;
-    height: 1.5rem;
     background: rgba(50, 60, 66, 0.4);
     border: 0.05rem solid white;
-    font-size: 0.7rem;
-    position: absolute;
-    display: inline-block;
-    left: 30%;
-    top: 65%;
-    transform: translate(-50%,-50%);
+    width: 4.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
 }
-svg.icon.playIcon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%,-50%);
-}
-p.mobilePlaying {
-    margin: 0;
-    color: white;
-    font-weight: 100;
-    display: inline-block;
-    position: absolute;
-    left: 55%;
-    top: 65%;
-    transform: translate(-50%,-50%);
-}
-/* .info{
-    margin-left: 4rem;
-    margin-top: 2rem;
+.info{
+    margin-left: 2.5rem;
+    margin-top: 2.5rem;
 }
 .socialLinks {
     position: absolute;
     top: 0.5rem;
-    right: 5rem;
-}    */
+    right: 4rem;
+} 
 /* .vjs-big-play-button{
     width: 2em;
     transform: translate(80%,0);

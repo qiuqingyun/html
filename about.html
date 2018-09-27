@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <title>关于</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 1000px)">
     <script src="css/iconfont/iconfont.js"></script>
 </head>
 
 <body>
     <div class="mainContainer clearfix">
         <header>
-            <div class="logos " onclick="location='index.html'">
+            <div class="logos" onclick="location='index.html'">
                 <svg class="icon logo" aria-hidden="true">
                     <use xlink:href="#icon-navicon-logopz"></use>
                 </svg>
@@ -21,10 +22,21 @@
                 <p class="logoText logoText2">CREATER</p>
             </div>
             <nav class="topBar">
-                <ul>
-                    <li><a href="index.html" class="trans-fadeout ">首页</a></li>
-                    <li><a href="about.html" class="trans-fadeout choosed">介绍</a></li>
-                </ul>
+                <div class="mobileSwitchBotton" onclick="menu.open()"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-caidan"></use>
+                    </svg></div>
+                <div class="topDrawer trans-fadeout">
+                    <ul class="topBarList">
+                        <li><a href="index.html" class="trans-fadeout">首页</a></li>
+                        <hr class="topBarListHr">
+                        <li><a href="about.html" class="trans-fadeout choosed">关于</a></li>
+                    </ul>
+                    <div class="cross" onclick="menu.close()">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-cha"></use>
+                        </svg>
+                    </div>
+                </div>
             </nav>
         </header>
         <div class="content">

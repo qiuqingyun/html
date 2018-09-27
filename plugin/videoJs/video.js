@@ -107,7 +107,7 @@ var initialX = function (idX) {
     var myResponse = myRequest.response;
     videolength = myResponse.format.duration;
     videolength = timeCut(videolength);
-    id.innerHTML = '<p class="videoTitles">' + tempName.title + '</p>' + '<div class="playing trans-fadeout"><p>now  playing</p></div>' + '<div class="covers trans-fadeout image-fadeout"><svg class="icon icons" aria-hidden="true"><use xlink:href="#icon-player"></use></svg><p class="videolength">' + videolength + '</p></div>' + '<img src="' + tempName.posterUrl + '" class="videoPosters">';
+    id.innerHTML = '<p class="videoTitles">' + tempName.title + '</p>' + '<div class="playing trans-fadeout"><p>now  playing</p></div>' + '<div class="covers trans-fadeout image-fadeout"><svg class="icon icons" aria-hidden="true" onclick="poster2Play()"><use xlink:href="#icon-player"></use></svg><p class="videolength">' + videolength + '</p></div>' + '<img src="' + tempName.posterUrl + '" class="videoPosters">';
   }
 }
 
@@ -155,6 +155,8 @@ function poster2Play() {
     videoTitles.style.opacity = '0';
     covers.style.visibility = 'hidden';
     covers.style.opacity = '0';
+    // scroll(0, 0);
+    backTop ();
   }
   switch (playerSrc) {
     case video1.videoUrl:
@@ -218,6 +220,39 @@ player.addChild('TitleBar', { text: video1.title });//标题内容
 
 
 //其他
+
+// 移动端适配
+(function (){
+  var visualViewport=window. innerWidth;
+  var mainPlayerT = document.getElementsByClassName('mainPlayer-dimensions')[0];
+  var mainCover = document.getElementsByClassName('mainCover')[0];
+  var videoList = document.getElementsByClassName('videoList');
+  if(visualViewport<=1000){
+    document.getElementsByTagName('html')[0].style.fontSize=20*visualViewport/320+'px';
+    var mainContainer=document.getElementsByClassName('mainContainer')[0];
+    mainContainer.style.width=px2rem(visualViewport);
+  }
+  mainPlayerT.style.width = px2rem(options.width);
+  mainPlayerT.style.height = px2rem(options.height);
+  if (visualViewport <= 1000) {
+    mainPlayerT.style.width = px2rem(visualViewport);
+    mainPlayerT.style.height = px2rem(visualViewport * 0.5625);
+    mainCover.style.width = px2rem(visualViewport);
+    mainCover.style.height = px2rem(visualViewport * 0.5625);
+    var playButton = document.getElementsByClassName('playButton')[0];
+    playButton.innerHTML = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-custom-play"></use></svg>'
+    for(var i=0;i<4;i++){
+      videoList[i].style.width = px2rem(visualViewport*0.9);
+      videoList[i].style.height = px2rem(visualViewport * 0.5625*0.9);
+    }
+  }
+}());
+
+//px化为rem
+function px2rem(pxs) {
+  var rems = pxs / parseFloat(getComputedStyle(document.getElementsByTagName('html')[0],false)["fontSize"]) + 'rem';
+  return rems;
+}
 //时间格式化
 function timeCut(seconds) {
   seconds = parseInt(seconds);
@@ -231,16 +266,4 @@ function timeCut(seconds) {
   }
   var times = minutes + ':' + seconds;
   return times;
-}
-
-// 将player的长宽从px改为rem
-function playerStyle() {
-  var mainPlayerT = document.getElementsByClassName('mainPlayer-dimensions')[0];
-  mainPlayerT.style.width = px2rem(options.width);
-  mainPlayerT.style.height = px2rem(options.height);
-}
-playerStyle();
-function px2rem(pxs){
-  var rems=pxs/20+'rem';
-  return rems;
 }

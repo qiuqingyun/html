@@ -185,7 +185,7 @@ p.logoText.logoText2 {
     cursor:pointer;
     position: relative;
 }
-.mainContainer .videoListContainer .videoList:nth-child(even){
+.mainContainer .videoListContainer .videoList:nth-child(odd){
     margin-right:0;
 }
 .mainContainer .videoListContainer .videoList .videoTitles{
@@ -258,6 +258,9 @@ p.videolength {
     top: 50%;
     left: 50%;
     margin: 0;
+}
+.mobileSwitchBotton,.cross,.topBarListHr,.VideoListText{
+    display: none;
 }
 /*  */
 .socialLinks{
