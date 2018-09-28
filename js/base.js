@@ -5,7 +5,7 @@
 }());
 (function () {
   var visualViewport = window.innerWidth;
-  if (visualViewport <= 1000) {
+  if (visualViewport <= 500) {
     document.getElementsByTagName('html')[0].style.fontSize = 20 * visualViewport / 320 + 'px';
     var mainContainer = document.getElementsByClassName('mainContainer')[0];
     mainContainer.style.width = px2rem(visualViewport);

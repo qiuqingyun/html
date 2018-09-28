@@ -15,7 +15,7 @@
     pointer-events: none;
 }
 html{
-    font-family: "Helvetica Neue",'Calibri','MS yahei';
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
     font-size:125%;
     letter-spacing: 0.05rem;
 }

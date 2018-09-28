@@ -99,14 +99,65 @@ footer{
     font-size: 1rem;
 }
 .info{
-    margin-left: 2.5rem;
-    margin-top: 2.5rem;
+    position: absolute;
+    width: 13rem;
+    left: 50%;
+    margin: 2rem 0 1rem 0;
+    transform: translate(-47%,0);
 }
 .socialLinks {
     position: absolute;
     top: 0.5rem;
     right: 4rem;
 } 
+.video-js .vjs-time-control {
+    display: none;
+}
+.video-js .vjs-big-play-button {
+    height: 1.5rem;
+    width: 4rem;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    line-height: 1.2em;
+    font-size: 1.2rem;
+}
+.stopBotton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+    height: 1.5rem;
+    width: 4rem;
+    font-size: 1.2rem;
+    line-height: 1.3em;
+    cursor: pointer;
+    background-color: rgba(43, 51, 63, 0.5);
+    border-radius: 1em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.vjs-playing.vjs-user-active .stopBotton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: visible;
+    opacity: 1;
+}
+/* .vjs-big-play-button .vjs-icon-placeholder {
+    position: absolute;
+    top: -0.9rem;
+    left: 0;
+    right: 0;
+    font-size: 1.2rem;
+} */ 
+/* .video-js .vjs-volume-panel {
+    display: none;
+} */
 /* .vjs-big-play-button{
     width: 2em;
     transform: translate(80%,0);

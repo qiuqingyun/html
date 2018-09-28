@@ -142,6 +142,14 @@ function poster2Play() {
   var posterT = document.getElementsByClassName('mainCover');
   posterT[0].style.display = 'none';
   player.play();
+  (function(){
+    mainPlayer=document.getElementById('mainPlayer');
+    var stopBotton=document.createElement('div');
+    stopBotton.setAttribute('class','stopBotton');
+    stopBotton.setAttribute('onclick','player.pause()');
+    stopBotton.innerHTML='<svg class="icon" aria-hidden="true"><use xlink:href="#icon-pause"></use></svg>';
+    mainPlayer.appendChild(stopBotton);
+  }());
   var playerSrc = document.getElementsByTagName('video')[0].src;
   function showPlaylistText(idX) {
     idX -= 1;
@@ -225,16 +233,14 @@ player.addChild('TitleBar', { text: video1.title });//标题内容
 (function (){
   var visualViewport=window. innerWidth;
   var mainPlayerT = document.getElementsByClassName('mainPlayer-dimensions')[0];
-  var mainCover = document.getElementsByClassName('mainCover')[0];
-  var videoList = document.getElementsByClassName('videoList');
-  if(visualViewport<=1000){
+  mainPlayerT.style.width = px2rem(options.width);
+  mainPlayerT.style.height = px2rem(options.height);
+  if(visualViewport<=500){
+    var mainCover = document.getElementsByClassName('mainCover')[0];
+    var videoList = document.getElementsByClassName('videoList');
     document.getElementsByTagName('html')[0].style.fontSize=20*visualViewport/320+'px';
     var mainContainer=document.getElementsByClassName('mainContainer')[0];
     mainContainer.style.width=px2rem(visualViewport);
-  }
-  mainPlayerT.style.width = px2rem(options.width);
-  mainPlayerT.style.height = px2rem(options.height);
-  if (visualViewport <= 1000) {
     mainPlayerT.style.width = px2rem(visualViewport);
     mainPlayerT.style.height = px2rem(visualViewport * 0.5625);
     mainCover.style.width = px2rem(visualViewport);
