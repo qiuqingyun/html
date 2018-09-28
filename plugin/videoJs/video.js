@@ -145,7 +145,7 @@ function poster2Play() {
   (function(){
     mainPlayer=document.getElementById('mainPlayer');
     var stopBotton=document.createElement('div');
-    stopBotton.setAttribute('class','stopBotton');
+    stopBotton.setAttribute('class','stopBotton trans-fadeout');
     stopBotton.setAttribute('onclick','player.pause()');
     stopBotton.innerHTML='<svg class="icon" aria-hidden="true"><use xlink:href="#icon-pause"></use></svg>';
     mainPlayer.appendChild(stopBotton);

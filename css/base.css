@@ -168,6 +168,33 @@ p.logoText.logoText2 {
     /* background: #7FCCF7; */
     background:rgb(93, 190, 247);
 }
+.stopBotton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+    height: 3rem;
+    width: 7.5rem;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    cursor: pointer;
+    background-color: rgba(43, 51, 63, 0.5);
+    border-radius: 2em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.vjs-playing.vjs-user-active .stopBotton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: visible;
+    opacity: 1;
+}
 /*  */
 .mainContainer #mainPlayer{
     margin: 0 auto;

@@ -9,6 +9,10 @@
     document.getElementsByTagName('html')[0].style.fontSize = 20 * visualViewport / 320 + 'px';
     var mainContainer = document.getElementsByClassName('mainContainer')[0];
     mainContainer.style.width = px2rem(visualViewport);
+    var style = document.createElement('link');
+    style.href = 'css/mobile.css';
+    style.rel = 'stylesheet';
+    document.getElementsByTagName('head').item(0).appendChild(style);
   }
 }());
 //px化为rem
@@ -24,7 +28,9 @@ var menu = {
     this.topDrawer.width = px2rem(window.innerWidth);
     this.topDrawer.visibility = 'visible';
     this.topDrawer.opacity = '1';
+    this.topDrawer.display= 'block';
     this.mainContainer.position='fixed';
+
   },
   close: function () {
     this.topDrawer.visibility = 'hidden';
